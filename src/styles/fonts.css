@@ -1,0 +1,30 @@
+/* Elden Ring Inspired Typography Stack
+ *
+ * 1. Cinzel Decorative & Cinzel: Closest open-source match to Mantinia
+ *    (used for Elden Ring's engraved main titles, boss names, and area headers).
+ * 2. Cormorant Garamond: Classic FromSoftware item-description & lore serif.
+ * 3. Inter: Clean UI sans-serif for stats, filters, and metadata.
+ *
+ * To use a local commercial font (e.g., Mantinia.woff2), place it in
+ * `public/fonts/` and uncomment the @font-face block below:
+ *
+ * @font-face {
+ *   font-family: 'Mantinia';
+ *   src: url('/fonts/Mantinia.woff2') format('woff2');
+ *   font-weight: 400;
+ *   font-style: normal;
+ *   font-display: swap;
+ * }
+ */
+
+@import '@fontsource/cinzel-decorative/400.css';
+@import '@fontsource/cinzel-decorative/700.css';
+@import '@fontsource/cinzel/400.css';
+@import '@fontsource/cinzel/600.css';
+@import '@fontsource/cinzel/700.css';
+@import '@fontsource/cormorant-garamond/400.css';
+@import '@fontsource/cormorant-garamond/400-italic.css';
+@import '@fontsource/cormorant-garamond/600.css';
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/600.css';

@@ -1,0 +1,28 @@
+---
+import { Icon } from 'astro-icon/components';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import EnvironmentCheck from '../components/EnvironmentCheck';
+---
+
+<BaseLayout title="Elden Site of Wisdom — Environment Ready">
+  <section class="mx-auto flex min-h-screen max-w-4xl flex-col justify-center px-6 py-20">
+    <div class="mb-8 flex items-center gap-3 text-er-gold">
+      <Icon name="game-icons:crowned-skull" class="h-7 w-7" />
+      <span class="font-heading text-xs tracking-[0.3em] uppercase text-er-gold-dim">
+        Site of Grace Ignited
+      </span>
+    </div>
+
+    <h1 class="font-display text-4xl leading-tight tracking-wide text-er-gold-bright sm:text-5xl">
+      Elden Site of Wisdom
+    </h1>
+
+    <p class="mt-4 max-w-2xl font-lore text-2xl italic text-er-parchment/90">
+      "Rise now, ye Tarnished. The archive environment is forged and ready."
+    </p>
+
+    <div class="mt-10">
+      <EnvironmentCheck client:load />
+    </div>
+  </section>
+</BaseLayout>

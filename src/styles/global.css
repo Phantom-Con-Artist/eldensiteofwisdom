@@ -1,0 +1,45 @@
+@import './fonts.css';
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+
+@theme {
+  --font-display: 'Cinzel Decorative', 'Cinzel', Georgia, serif;
+  --font-heading: 'Cinzel', Georgia, serif;
+  --font-lore: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+
+  --color-er-obsidian: #0b0a09;
+  --color-er-charcoal: #151311;
+  --color-er-slate: #1f1c18;
+  --color-er-gold: #c8a253;
+  --color-er-gold-bright: #e5c67b;
+  --color-er-gold-dim: #7c6433;
+  --color-er-parchment: #e4dccb;
+  --color-er-ash: #9e9689;
+  --color-er-crimson: #8f2424;
+}
+
+/* Lenis smooth scroll base rules */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: clip;
+}
+
+body {
+  background-color: var(--color-er-obsidian);
+  color: var(--color-er-parchment);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}

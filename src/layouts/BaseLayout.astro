@@ -1,0 +1,37 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  namespace?: string;
+}
+
+const {
+  title = 'Elden Site of Wisdom',
+  description = 'An Elden Ring lore, boss, and artifact archive powered by Astro, React, GSAP, Lenis, Barba, and Cloudinary.',
+  namespace = 'home',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+  </head>
+  <body data-barba="wrapper" class="min-h-screen bg-er-obsidian text-er-parchment antialiased selection:bg-er-gold/30 selection:text-er-gold-bright">
+    <main data-barba="container" data-barba-namespace={namespace}>
+      <slot />
+    </main>
+
+    <script>
+      import { initMotion } from '../lib/motion';
+
+      initMotion();
+    </script>
+  </body>
+</html>
